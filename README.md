@@ -342,8 +342,9 @@ If you fork the project on GitHub, you can run your fork's [build workflow](.git
                                     extractor plugins; postprocessor plugins can
                                     only be loaded from the default plugin
                                     directories
-    --flat-playlist                 Do not extract the videos of a playlist,
-                                    only list them
+    --flat-playlist                 Do not extract a playlist's URL result
+                                    entries; some entry metadata may be missing
+                                    and downloading may be bypassed
     --no-flat-playlist              Fully extract the videos of a playlist
                                     (default)
     --live-from-start               Download livestreams from the start.
@@ -1293,6 +1294,7 @@ The available fields are:
  - `playlist_uploader_id` (string): Nickname or id of the playlist uploader
  - `playlist_channel` (string): Display name of the channel that uploaded the playlist
  - `playlist_channel_id` (string): Identifier of the channel that uploaded the playlist
+ - `playlist_webpage_url` (string): URL of the playlist webpage
  - `webpage_url` (string): A URL to the video webpage which, if given to yt-dlp, should yield the same result again
  - `webpage_url_basename` (string): The basename of the webpage URL
  - `webpage_url_domain` (string): The domain of the webpage URL
@@ -1866,8 +1868,8 @@ The following extractors use this feature:
 #### bilibili
 * `prefer_multi_flv`: Prefer extracting flv formats over mp4 for older videos that still provide legacy formats
 
-#### digitalconcerthall
-* `prefer_combined_hls`: Prefer extracting combined/pre-merged video and audio HLS formats. This will exclude 4K/HEVC video and lossless/FLAC audio formats, which are only available as split video/audio HLS formats
+#### sonylivseries
+* `sort_order`: Episode sort order for series extraction - one of `asc` (ascending, oldest first) or `desc` (descending, newest first). Default is `asc`
 
 **Note**: These options may be changed/removed in the future without concern for backward compatibility
 
