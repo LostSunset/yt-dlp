@@ -309,6 +309,7 @@ from .brilliantpala import (
     BrilliantpalaClassesIE,
     BrilliantpalaElearnIE,
 )
+from .btvplus import BTVPlusIE
 from .bundesliga import BundesligaIE
 from .bundestag import BundestagIE
 from .bunnycdn import BunnyCdnIE
@@ -1147,6 +1148,7 @@ from .minds import (
     MindsIE,
 )
 from .minoto import MinotoIE
+from .mir24tv import Mir24TvIE
 from .mirrativ import (
     MirrativIE,
     MirrativUserIE,
@@ -1166,6 +1168,10 @@ from .mixcloud import (
     MixcloudIE,
     MixcloudPlaylistIE,
     MixcloudUserIE,
+)
+from .mixlr import (
+    MixlrIE,
+    MixlrRecoringIE,
 )
 from .mlb import (
     MLBIE,
